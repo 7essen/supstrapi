@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": " Match"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "homeTeam": {
+      "type": "string",
+      "required": true
+    },
+    "awayTeam": {
+      "type": "string",
+      "required": true
+    },
+    "matchTime": {
+      "type": "time",
+      "required": true
+    },
+    "channelName": {
+      "type": "string",
+      "required": true
+    },
+    "homeTeamLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    },
+    "awayTeamLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
