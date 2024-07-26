@@ -1,10 +1,10 @@
 module.exports = {
   connection: {
-    client: 'pg',
+    client: 'postgres',
     connection: {
       host: 'aws-0-us-east-1.pooler.supabase.com',
       user: 'postgres.brtlckuprzdtzytcccvh',
-      password: 'Husseinhossam7#', // تأكد من أن علامات مثل # مشفرة إذا لزم الأمر
+      password: 'Husseinhossam7#',
       database: 'postgres',
       port: 6543,
     },
