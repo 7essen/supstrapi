@@ -1,17 +1,16 @@
-module.exports = {
+module.exports = ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: env('DATABASE_CLIENT', 'postgres'),
     connection: {
-      host: 'aws-0-us-east-1.pooler.supabase.com',
-      user: 'postgres.brtlckuprzdtzytcccvh',
-      password: 'Husseinhossam7#',
-      database: 'postgres',
-      port: 6543,
+      host: env('DATABASE_HOST', 'aws-0-us-east-1.pooler.supabase.com'),
+      port: env.int('DATABASE_PORT', 6543),
+      database: env('DATABASE_NAME', 'postgres'),
+      user: env('DATABASE_USERNAME', 'postgres.brtlckuprzdtzytcccvh'),
+      password: env('DATABASE_PASSWORD', 'Husseinhossam7#'),
+      ssl: {
+        rejectUnauthorized: false,
+      },
     },
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    acquireConnectionTimeout: 10000,
+    debug: false,
   },
-};
+});
